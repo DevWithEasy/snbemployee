@@ -46,7 +46,7 @@
                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center"><%= employee.salary %></td>
                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center"><%= employee.joining %></td>
                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center"><%= employee.status %></td>
-                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center"><img src="/upload/<%= employee.photo %>" alt="" class="h-6 w-6 rounded-full"></td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center"><img src="<%= employee.photo %>" alt="" class="h-6 w-6 rounded-full"></td>
                 <td class="flex justify-center space-x-2 text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center">
                   <a
                     href="/employee/details/<%= employee._id %> "

@@ -18,7 +18,7 @@ mongoose.connect(URL)
 app.set('view engine', 'ejs');
 
 const middleware = [
-    express.static('public'),
+    express.static('public/upload'),
     express.urlencoded({extended: true}),
     express.json()
 ]
