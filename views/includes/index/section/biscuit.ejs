@@ -1,0 +1,114 @@
+<div class="w-full bg-white border rounded shadow-md shadow-blue-100">
+    <p class="text-center font-bold py-1 text-2xl bg-blue-100">Biscuit</p>
+    <div class="p-2">
+        <table class="w-full">
+            <tbody >
+                <tr class="border-b hover:bg-gray-100 transition-all duration-300">
+                    <td class="w-1/2 py-1">Total:</td>
+                    <td class="w-1/2 text-center py-1">
+                      <span class="font-bold text-red-500 border rounded-full px-4"><%= employees.filter(e=>e.section === 'Biscuit').length%></span>
+                      <span class="px-2 border">
+                        <span class="text-xs text-blue-500"><%= employees.filter(e=>e.section === 'Biscuit' && e.gender === 'Male' && e.status === 'Active').length%></span> /
+                      <span class="text-xs text-red-500"><%= employees.filter(e=>e.section === 'Biscuit' && e.gender === 'Male' && e.status === 'Close').length%></span>
+                      </span>
+                    </td
+                    ></td>
+                  </tr>
+            
+                  <tr class="border-b hover:bg-gray-100 transition-all duration-300">
+                    <td class="w-1/2 py-1">Male:</td>
+                    <td class="w-1/2 text-center py-1">
+                      <span class="font-bold text-red-500 border rounded-full px-4"><%= employees.filter(e=>e.section === 'Biscuit' && e.gender === 'Male').length%></span>
+                      <span class="px-2 border">
+                        <span class="text-xs text-blue-500"><%= employees.filter(e=>e.section === 'Biscuit' && e.gender === 'Male' && e.status === 'Active').length%></span> /
+                      <span class="text-xs text-red-500"><%= employees.filter(e=>e.section === 'Biscuit' && e.gender === 'Male' && e.status === 'Close').length%></span>
+                      </span>
+                      
+                    </td>
+                  </tr>
+            
+                  <tr class="border-b hover:bg-gray-100 transition-all duration-300">
+                    <td class="w-1/2 py-1">Female:</td>
+                    <td class="w-1/2 text-center py-1">
+                      <span class="font-bold text-red-500 border rounded-full px-4"><%= employees.filter(e=>e.section === 'Biscuit' && e.gender === 'Female').length%></span>
+                      <span class="px-2 border">
+                        <span class="text-xs text-blue-500"><%= employees.filter(e=>e.section === 'Biscuit' && e.gender === 'Female' && e.status === 'Active').length%></span> /
+                      <span class="text-xs text-red-500"><%= employees.filter(e=>e.section === 'Biscuit' && e.gender === 'Female' && e.status === 'Close').length%></span>
+                      </span>
+                    </td>
+                  </tr>
+            
+                  <tr class="border-b hover:bg-gray-100 transition-all duration-300">
+                    <td class="w-1/2 py-1">Officer:</td>
+                    <td class="w-1/2 text-center py-1">
+                      <span class="font-bold text-red-500 border rounded-full px-4"><%= employees.filter(e=>e.section === 'Biscuit' && e.designation === 'Officer').length%></span>
+                      <span class="px-2 border">
+                        <span class="text-xs text-blue-500"><%= employees.filter(e=>e.section === 'Biscuit' && e.designation === 'Officer' && e.status === 'Active').length%></span> /
+                      <span class="text-xs text-red-500"><%= employees.filter(e=>e.section === 'Biscuit' && e.designation === 'Officer' && e.status === 'Close').length%></span>
+                      </span>
+                      
+                    </td>
+                  </tr>
+            
+                  <tr class="border-b hover:bg-gray-100 transition-all duration-300">
+                    <td class="w-1/2 py-1">Supervisor:</td>
+                    <td class="w-1/2 text-center py-1">
+                      <span class="font-bold text-red-500 border rounded-full px-4"><%= employees.filter(e=>e.section === 'Biscuit' && e.designation === 'Supervisor').length%></span>
+                      <span class="px-2 border">
+                        <span class="text-xs text-blue-500"><%= employees.filter(e=>e.section === 'Biscuit' && e.designation === 'Supervisor' && e.status === 'Active').length%></span> /
+                      <span class="text-xs text-red-500"><%= employees.filter(e=>e.section === 'Biscuit' && e.designation === 'Supervisor' && e.status === 'Close').length%></span>
+                      </span>
+                      
+                    </td>
+                  </tr>
+            
+                  <tr class="border-b hover:bg-gray-100 transition-all duration-300">
+                    <td class="w-1/2 py-1">Asst. Supervisor:</td>
+                    <td class="w-1/2 text-center py-1">
+                      <span class="font-bold text-red-500 border rounded-full px-4"><%= employees.filter(e=>e.section === 'Biscuit' && e.designation === 'Asst. Supervisor').length%></span>
+                      <span class="px-2 border">
+                        <span class="text-xs text-blue-500"><%= employees.filter(e=>e.section === 'Biscuit' && e.designation === 'Asst. Supervisor' && e.status === 'Active').length%></span> /
+                      <span class="text-xs text-red-500"><%= employees.filter(e=>e.section === 'Biscuit' && e.designation === 'Asst. Supervisor' && e.status === 'Close').length%></span>
+                      </span>
+                      
+                    </td>
+                  </tr>
+            
+                  <tr class="border-b hover:bg-gray-100 transition-all duration-300">
+                    <td class="w-1/2 py-1">Operator:</td>
+                    <td class="w-1/2 text-center py-1">
+                      <span class="font-bold text-red-500 border rounded-full px-4"><%= employees.filter(e=>e.section === 'Biscuit' && e.designation === 'Operator').length%></span>
+                      <span class="px-2 border">
+                        <span class="text-xs text-blue-500"><%= employees.filter(e=>e.section === 'Biscuit' && e.designation === 'Operator' && e.status === 'Active').length%></span> /
+                      <span class="text-xs text-red-500"><%= employees.filter(e=>e.section === 'Biscuit' && e.designation === 'Operator' && e.status === 'Close').length%></span>
+                      </span>
+                      
+                    </td>
+                  </tr>
+            
+                  <tr class="border-b hover:bg-gray-100 transition-all duration-300">
+                    <td class="w-1/2 py-1">Asst. Operator:</td>
+                    <td class="w-1/2 text-center py-1">
+                      <span class="font-bold text-red-500 border rounded-full px-4"><%= employees.filter(e=>e.section === 'Biscuit' && e.designation === 'Asst. Operator').length%></span>
+                      <span class="px-2 border">
+                         <span class="text-xs text-blue-500"><%= employees.filter(e=>e.section === 'Biscuit' && e.designation === 'Asst. Operator' && e.status === 'Active').length%></span> /
+                      <span class="text-xs text-red-500"><%= employees.filter(e=>e.section === 'Biscuit' && e.designation === 'Asst. Operator' && e.status === 'Close').length%></span>
+                      </span>
+                     
+                    </td>
+                  </tr>
+                  <tr class=" hover:bg-gray-100 transition-all duration-300">
+                    <td class="w-1/2 py-1">Helper:</td>
+                    <td class="w-1/2 text-center py-1">
+                      <span class="font-bold text-red-500 border rounded-full px-4"><%= employees.filter(e=>e.section === 'Biscuit' && e.designation === 'Helper').length%></span>
+                      <span class="px-2 border">
+                        <span class="text-xs text-blue-500"><%= employees.filter(e=>e.section === 'Biscuit' && e.designation === 'Helper' && e.status === 'Active').length%></span> /
+                      <span class="text-xs text-red-500"><%= employees.filter(e=>e.section === 'Biscuit' && e.designation === 'Helper' && e.status === 'Close').length%></span>
+                      </span>
+                      
+                    </td>
+                  </tr>
+            </tbody>
+          </table>
+    </div>
+  </div>

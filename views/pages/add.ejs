@@ -1,0 +1,156 @@
+<%- include('../includes/header.ejs') %>
+
+<form
+  action="/employee/add"
+  method="POST"
+  enctype="multipart/form-data"
+  class="m-4 px-4 pb-4 border border-blue-100 rounded-lg shadow-md shadow-blue-100 space-y-3"
+>
+  <% if(alert ===''){ %>
+  <p></p>
+  <% } %> <% if(alert ==='no'){ %>
+  <div
+    class="p-4 my-2 text-sm text-blue-700 bg-blue-100 rounded-lg"
+    role="alert"
+  >
+    Successfully added!
+  </div>
+  <% }else if (alert === 'yes'){ %>
+  <div class="p-4 my-2 text-sm text-red-700 bg-red-100 rounded-lg" role="alert">
+    Something went wrong!
+  </div>
+  <% } %>
+
+  <h1 class="text-2xl text-center font-bold bg-blue-50 py-1 my-3 rounded-full">
+    Add Employee
+  </h1>
+  <div class="md:flex gap-x-2 space-y-2 md:space-y-0">
+    <p class="md:w-1/2">
+      <label class="pl-1">Name:</label><br />
+      <input
+        class="w-full px-2 py-1 border outline-none focus:border-blue-500 rounded"
+        type="text"
+        name="name"
+      />
+    </p>
+    <p class="md:w-1/2">
+      <label class="pl-1">Section:</label><br />
+      <select
+        class="w-full py-1 border outline-none focus:border-blue-500 rounded"
+        type="text"
+        name="section"
+      >
+        <option value="">select</option>
+        <option value="Biscuit">Biscuit</option>
+        <option value="Wafer">Wafer</option>
+        <option value="cake">Cake</option>
+        <option value="Bakery">Bakery</option>
+        <option value="Snacks">Snacks</option>
+        <option value="Water">Water</option>
+      </select>
+    </p>
+  </div>
+
+  <div class="md:flex gap-x-2 space-y-2 md:space-y-0">
+    <p class="md:w-1/2">
+      <label class="pl-1">Designation:</label><br />
+      <select
+        class="w-full py-1 border outline-none focus:border-blue-500 rounded"
+        type="text"
+        name="designation"
+      >
+        <option value="">select</option>
+        <option value="Helper">Helper</option>
+        <option value="Operator">Operator</option>
+        <option value="Asst. Operator">Asst. Operator</option>
+        <option value="Supervisor">Supervisor</option>
+        <option value="Asst. Supervisor">Asst. Supervisor</option>
+        <option value="Officer">Officer</option>
+      </select>
+    </p>
+    <p class="md:w-1/2">
+      <label class="pl-1">Salary:</label><br />
+      <input
+        class="w-full px-2 py-1 border outline-none focus:border-blue-500 rounded"
+        type="number"
+        name="salary"
+      />
+    </p>
+  </div>
+
+  <div class="md:flex gap-x-2 space-y-2 md:space-y-0">
+    <p class="md:w-1/2">
+      <label class="pl-1">NID:</label><br />
+      <input
+        class="w-full px-2 py-1 border outline-none focus:border-blue-500 rounded"
+        type="text"
+        name="nid"
+      />
+    </p>
+    <p class="md:w-1/2">
+      <label class="pl-1">DOB:</label><br />
+      <input
+        class="w-full px-2 py-1 border outline-none focus:border-blue-500 rounded"
+        type="date"
+        name="dob"
+      />
+    </p>
+  </div>
+  <div class="md:flex gap-x-2 space-y-2 md:space-y-0">
+    <p class="md:w-1/2">
+      <label class="pl-1">Phone Number:</label><br />
+      <input
+        class="w-full px-2 py-1 border outline-none focus:border-blue-500 rounded"
+        type="text"
+        name="phone"
+      />
+    </p>
+    <p class="md:w-1/2">
+      <label class="pl-1">Joining Date:</label><br />
+      <input
+        class="w-full px-2 py-1 border outline-none focus:border-blue-500 rounded"
+        type="date"
+        name="joining"
+      />
+    </p>
+  </div>
+
+  <div class="md:flex gap-x-2 space-y-2 md:space-y-0">
+    <p class="md:w-1/2">
+      <label class="pl-1">Gender:</label><br />
+      <select
+        class="w-full py-1 border outline-none focus:border-blue-500 rounded"
+        type="text"
+        name="gender"
+      >
+        <option value="">select</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </p>
+    <p class="md:w-1/2">
+      <label class="pl-1">Address:</label><br />
+      <textarea
+        class="w-full px-2 py-1 border outline-none focus:border-blue-500 rounded"
+        rows="3"
+        name="address"
+      ></textarea>
+    </p>
+  </div>
+
+  <div class="mt-2">
+    <label class="pl-1">Image:</label><br />
+    <input
+      class="w-full px-2 py-1 border outline-none focus:border-blue-500 rounded"
+      type="file"
+      name="photo"
+    />
+    <input
+      type="submit"
+      value="Submit"
+      class="py-1 px-2 bg-blue-500 text-white rounded-lg cursor-pointer"
+    />
+  </div>
+</form>
+
+<%- include('../includes/footer.ejs') %>

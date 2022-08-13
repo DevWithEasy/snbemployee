@@ -1,0 +1,86 @@
+<%- include('../includes/header.ejs') %>
+
+<div class="m-4 p-4 md:w-1/2 mx-auto border shadow-md space-y-2 rounded">
+  <div class="flex justify-center items-center mb-6">
+    <img src="/upload/<%=employee.photo%>" alt="" class="h-40 w-40 rounded-full">
+  </div>
+  <% if(employee.status ==="Active"){ %>
+  <p class="">
+    <span class="font-semibold">Status:</span>
+    <span class="px-2 py-1 bg-yellow-500 text-white rounded"
+      ><%= employee.status %></span
+    >
+  </p>
+  <% }else{ %>
+  <p class="">
+    <span class="font-semibold">Status:</span>
+    <span class="px-2 py-1 bg-red-500 text-white rounded"
+      ><%= employee.status %></span
+    >
+  </p>
+  <% } %>
+
+  <div class="">
+    <span class="font-semibold">Name:</span>
+    <span><%= employee.name %></span>
+  </div>
+  <div class="flex space-x-3">
+    <p class="">
+      <span class="font-semibold">Section:</span>
+      <span><%= employee.section %></span>
+    </p>
+    <p class="">
+      <span class="font-semibold">Designation:</span>
+      <span><%= employee.designation %></span>
+    </p>
+  </div>
+
+  <div class="flex space-x-3">
+    <p class="">
+      <span class="font-semibold">Office ID:</span>
+      <span><%= employee.id %></span>
+    </p>
+    <p class="">
+      <span class="font-semibold">Salary:</span>
+      <span><%= employee.salary %></span>
+    </p>
+  </div>
+
+  <div class="space-y-2">
+    <p class="">
+      <span class="font-semibold">Contact:</span>
+      <span><%= employee.phone %></span>
+    </p>
+    <p class="">
+      <span class="font-semibold">NID No:</span>
+      <span><%= employee.nid %></span>
+    </p>
+    <p class="">
+      <span class="font-semibold">DOB:</span>
+      <span><%= employee.dob %></span>
+    </p>
+    <p class="">
+      <span class="font-semibold">Joining:</span>
+      <span><%= employee.joining %></span>
+    </p>
+    <p class="">
+      <span class="font-semibold">Gender:</span>
+      <span><%= employee.gender %></span>
+    </p>
+    <p class="">
+      <span class="font-semibold">Address:</span>
+      <span><%= employee.address %></span>
+    </p>
+  </div>
+  <p class="mt-2">
+    <a
+      href="/employee/update/<%= employee._id %> "
+      class="px-6 py-1 text-white bg-blue-500 rounded"
+      >Update</a
+    >
+  </p>
+</div>
+
+
+
+<%- include('../includes/footer.ejs') %>

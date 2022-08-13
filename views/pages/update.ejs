@@ -1,0 +1,157 @@
+<%- include('../includes/header.ejs') %>
+
+<form
+  action="/employee/update/<%=employee._id %>"
+  method="POST"
+  class="m-4 px-4 pb-4 border border-blue-100 rounded-lg shadow-md shadow-blue-100 space-y-3"
+>
+  <h1 class="text-2xl text-center font-bold bg-blue-50 py-1 my-3 rounded-full">
+    Update Data
+  </h1>
+  <p class="pl-2 py-2">
+    <label for="status">Employee Status:</label>
+    <select
+      name="status"
+      id="status"
+      class="border rounded focus:outline-none px-3"
+    >
+      <option value="<%=employee.status %>">Active</option>
+      <option value="Active">Active</option>
+      <option value="Close">Close</option>
+    </select>
+  </p>
+  <div class="md:flex gap-x-2 space-y-2 md:space-y-0">
+    <p class="md:w-1/2">
+      <label class="pl-1">Name:</label><br />
+      <input
+        class="w-full px-2 py-1 border outline-none focus:border-blue-500 rounded"
+        type="text"
+        name="name"
+        value=" <%=employee.name %> "
+      />
+    </p>
+    <p class="md:w-1/2">
+      <label class="pl-1">Section:</label><br />
+      <select
+        class="w-full py-1 border outline-none focus:border-blue-500 rounded"
+        type="text"
+        name="section"
+        value=" <%=employee.section %> "
+      >
+        <option value="<%=employee.section %>"><%=employee.section %></option>
+        <option value="Biscuit">Biscuit</option>
+        <option value="Wafer">Wafer</option>
+        <option value="cake">Cake</option>
+        <option value="Bakery">Bakery</option>
+        <option value="Snacks">Snacks</option>
+        <option value="Water">Water</option>
+      </select>
+    </p>
+  </div>
+
+  <div class="md:flex gap-x-2 space-y-2 md:space-y-0">
+    <p class="md:w-1/2">
+      <label class="pl-1">Designation:</label><br />
+      <select
+        class="w-full py-1 border outline-none focus:border-blue-500 rounded"
+        type="text"
+        name="designation"
+      >
+        <option value="<%=employee.designation %>">
+          <%=employee.designation %>
+        </option>
+        <option value="Helper">Helper</option>
+        <option value="Operator">Operator</option>
+        <option value="Asst. Operator">Asst. Operator</option>
+        <option value="Supervisor">Supervisor</option>
+        <option value="Asst. Supervisor">Asst. Supervisor</option>
+        <option value="Officer">Officer</option>
+      </select>
+    </p>
+    <p class="md:w-1/2">
+      <label class="pl-1">Salary:</label><br />
+      <input
+        class="w-full px-2 py-1 border outline-none focus:border-blue-500 rounded"
+        type="text"
+        name="salary"
+        value="<%=employee.salary%>"
+      />
+    </p>
+  </div>
+
+  <div class="md:flex gap-x-2 space-y-2 md:space-y-0">
+    <p class="md:w-1/2">
+      <label class="pl-1">NID:</label><br />
+      <input
+        class="w-full px-2 py-1 border outline-none focus:border-blue-500 rounded"
+        type="text"
+        name="nid"
+        value="<%=employee.nid %>"
+      />
+    </p>
+    <p class="md:w-1/2">
+      <label class="pl-1">DOB: </label><br />
+      <input
+        class="w-full px-2 py-1 border outline-none focus:border-blue-500 rounded"
+        type="date"
+        name="dob"
+        value="<%=employee.dob %>"
+      />
+    </p>
+  </div>
+  <div class="md:flex gap-x-2 space-y-2 md:space-y-0">
+    <p class="md:w-1/2">
+      <label class="pl-1">Phone Number:</label><br />
+      <input
+        class="w-full px-2 py-1 border outline-none focus:border-blue-500 rounded"
+        type="text"
+        name="phone"
+        value=" <%=employee.phone %> "
+      />
+    </p>
+    <p class="md:w-1/2">
+      <label class="pl-1">Joining Date: </label><br />
+      <input
+        class="w-full px-2 py-1 border outline-none focus:border-blue-500 rounded"
+        type="date"
+        name="joining"
+        value="<%=employee.joining %>"
+      />
+    </p>
+  </div>
+
+  <div class="md:flex gap-x-2 space-y-2 md:space-y-0">
+    <p class="md:w-1/2">
+      <label class="pl-1">Address:</label><br />
+      <textarea
+        class="w-full px-2 py-1 border outline-none focus:border-blue-500 rounded"
+        rows="3"
+        name="address"
+      >
+<%=employee.address %></textarea
+      >
+    </p>
+    <p class="md:w-1/2">
+      <label class="pl-1">Gender:</label><br />
+      <select
+        class="w-full py-1 border outline-none focus:border-blue-500 rounded"
+        type="text"
+        name="gender"
+      >
+        <option value="<%=employee.gender %>"><%=employee.gender %></option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </p>
+  </div>
+
+  <div class="mt-2">
+    <input
+      type="submit"
+      value="Submit"
+      class="py-1 px-6 bg-blue-500 text-white rounded-lg cursor-pointer"
+    />
+  </div>
+</form>
+
+<%- include('../includes/footer.ejs') %>

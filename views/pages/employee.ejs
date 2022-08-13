@@ -1,0 +1,73 @@
+<%- include('../includes/header.ejs') %>
+
+<div class="flex flex-col mx-2">
+  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="py-4 inline-block min-w-full sm:px-6 lg:px-8">
+      <div class="overflow-hidden ">
+        <table class="min-w-full my-10" id="myTable">
+          <thead class="border-b bg-gray-500">
+            <tr>
+              <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                #
+              </th>
+              <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                Name
+              </th>
+              <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                Section
+              </th>
+              <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                ID
+              </th>
+              <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                Salary
+              </th>
+              <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                Joining
+              </th>
+              <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                Status
+              </th>
+              <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                Image
+              </th>
+              <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                Action
+              </th>
+            </tr>
+          </thead class="border-b">
+          <tbody>
+            <% employees.map((employee,i)=>{ %>
+              <tr class="bg-white border-b">
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 text-center"><%= i+1 %></td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"><%= employee.name %></td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center"><%= employee.section %></td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center"><%= employee.id %></td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center"><%= employee.salary %></td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center"><%= employee.joining %></td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center"><%= employee.status %></td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center"><img src="/upload/<%= employee.photo %>" alt="" class="h-6 w-6 rounded-full"></td>
+                <td class="flex justify-center space-x-2 text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center">
+                  <a
+                    href="/employee/details/<%= employee._id %> "
+                    class="px-2 py-1 text-white bg-yellow-400 rounded"
+                    >Details</a
+                  >
+                  <a
+                    href="/employee/update/<%= employee._id %> "
+                    class="px-2 py-1 text-white bg-blue-400 rounded"
+                    >Update</a
+                  >
+                  <!-- <button class="px-2 py-1 text-white bg-red-400 rounded">Delete</button> -->
+                </td>
+              </tr class="bg-white border-b">
+              <%}) %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%- include('../includes/footer.ejs') %>

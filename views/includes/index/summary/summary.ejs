@@ -1,0 +1,117 @@
+<div class="md:flex border p-4 m-4 shadow-md space-y-2 md:space-x-2 rounded">
+    <div class="w-full md:w-1/4 flex justify-center items-center">
+      <div
+        class="flex flex-col justify-center items-center p-2 w-52 h-52 rounded-full border-4 border-yellow-400 shadow-lg"
+      >
+        <p class="text-pink-500">Total Employee</p>
+        <p class="text-blue-500 font-bold text-4xl"><%= employees.length %></p>
+        <p class="">
+          <span class="px-4 border rounded-full text-blue-500"><%= employees.filter(e=>e.status === 'Active').length %></span> /
+          <span class="px-4 border rounded-full text-red-500"><%= employees.filter(e=>e.status === 'Close').length %></span>
+        </p>
+      </div>
+    </div>
+    <div class="w-full md:w-3/4">
+      <ul class="space-y-2">
+        <li class="px-2 py-1 border border-blue-200 rounded">
+          <p class="flex justify-between">
+            <span>Total Manpower:</span>
+            <span>
+              <span class="px-4 border rounded-full font-bold text-red-500"> <%= employees.length %></span>
+              <span class="px-4 border">
+                <span class=" text-blue-500"> <%= employees.filter(e=>e.status === 'Active').length %></span> /
+                <span class="text-red-500"> <%= employees.filter(e=>e.status === 'Closed').length %></span>
+              </span>
+            </span>
+            
+          </p>
+        </li>
+  
+        <li class="px-2 py-1 border border-blue-200 rounded">
+          <p class="flex justify-between">
+            <span>Total Male:</span>
+          <span>
+            <span class="px-4 border rounded-full font-bold text-red-500"><%= employees.filter(e=>e.gender === 'Male').length %></span>
+            <span class="px-4 border">
+              <span class=" text-blue-500"><%= employees.filter(e=>e.gender === 'Male' && e.status === 'Active').length%></span> /
+              <span class="text-red-500"><%= employees.filter(e=>e.gender === 'Male' && e.status === 'Close').length%></span>
+            </span>
+          </span>
+            
+          </p>
+        </li>
+  
+        <li class="px-2 py-1 border border-blue-200 rounded">
+          <p class="flex justify-between">
+            <span>Total Female:</span>
+            <span>
+              <span class="px-4 border rounded-full font-bold text-red-500"><%= employees.filter(e=>e.gender === 'Female').length %></span>
+              <span class="px-4 border">
+                <span class=" text-blue-500"><%= employees.filter(e=>e.gender === 'Female' && e.status === 'Active').length%></span> /
+                <span class="text-red-500"><%= employees.filter(e=>e.gender === 'Female' && e.status === 'Close').length%></span>
+              </span>
+            </span>
+          </p>
+        </li>
+  
+        <li class="px-2 py-1 border border-blue-200 rounded ">
+          <p class="flex justify-between ">
+            <span>Officier:</span>
+            <span>
+              <span class="px-4 border rounded-full font-bold text-red-500"><%= employees.filter(e=>e.designation === 'Officer').length %></span>
+              <span class="px-4 border">
+                <span class=" text-blue-500"><%= employees.filter(e=>e.designation === 'Officer' && e.status === 'Active').length%></span>/
+                <span class="text-red-500"><%= employees.filter(e=>e.designation === 'Officer' && e.status === 'Close').length%></span>
+              </span>
+            </span>
+          </p>
+        </li>
+  
+        <li class="px-2 py-1 border border-blue-200 rounded space-y-1">
+          <p class="flex justify-between">
+            <span>Supervisor:</span>
+            <span>
+              <span class="px-4 border rounded-full font-bold text-red-500"><%= employees.filter(e=>e.designation === 'Supervisor').length %></span>
+              <span class="px-4 border">
+                <span class=" text-blue-500"><%= employees.filter(e=>e.designation === 'Supervisor' && e.status === 'Active').length%></span>/
+                <span class="text-red-500"><%= employees.filter(e=>e.designation === 'Supervisor' && e.status === 'Close').length%></span>
+              </span>
+            </span>
+          </p>
+          <p class="flex justify-between">
+            <span>Asst. Supervisor:</span>
+            <span>
+              <span class="px-4 border rounded-full font-bold text-red-500"><%= employees.filter(e=>e.designation === 'Asst. Supervisor').length %></span>
+              <span class="px-4 border">
+                <span class=" text-blue-500"><%= employees.filter(e=>e.designation === 'Asst. Supervisor' && e.status === 'Active').length%></span>/
+                <span class="text-red-500"><%= employees.filter(e=>e.designation === 'Asst. Supervisor' && e.status === 'Close').length%></span>
+              </span>
+            </span>
+          </p>
+        </li>
+  
+        <li class="px-2 py-1 border border-blue-200 rounded space-y-1">
+          <p class="flex justify-between">
+            <span>Operator:</span>
+            <span>
+              <span class="px-4 border rounded-full font-bold text-red-500"><%= employees.filter(e=>e.designation === 'Operator').length %></span>
+              <span class="px-4 border">
+                <span class=" text-blue-500"><%= employees.filter(e=>e.designation === 'Operator' && e.status === 'Active').length%></span>/
+                <span class="text-red-500"><%= employees.filter(e=>e.designation === 'Operator' && e.status === 'Close').length%></span>
+              </span>
+            </span>
+          </p>
+          <p class="flex justify-between">
+            <span>Asst. Operator:</span>
+            <span>
+              <span class="px-4 border rounded-full font-bold text-red-500"><%= employees.filter(e=>e.designation === 'Asst. Operator').length %></span>
+              <span class="px-4 border">
+                <span class=" text-blue-500"><%= employees.filter(e=>e.designation === 'Asst. Operator' && e.status === 'Active').length%></span>/
+                <span class="text-red-500"><%= employees.filter(e=>e.designation === 'Asst. Operator' && e.status === 'Close').length%></span>
+              </span>
+            </span>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
