@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require('express');
 const mongoose  = require('mongoose');
-
+const path = require('path');
 const Employee = require('./models/employee')
 
 const employeeRouter = require('./routers/employee')
@@ -18,10 +18,11 @@ mongoose.connect(URL)
 app.set('view engine', 'ejs');
 
 const middleware = [
-    express.static('public/upload'),
+    express.static('public'),
     express.urlencoded({extended: true}),
     express.json()
 ]
+
 app.use(middleware)
 
 app.use('/employee',employeeRouter);
